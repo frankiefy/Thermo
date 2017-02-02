@@ -19,6 +19,9 @@ Thermostat.prototype.togglePowerSavingMode = function(){
     this._powerSavingMode = false;
   } else {
     this._powerSavingMode = true;
+    if (this._currentTemp > this.PSM_ON_MAX){
+      this._currentTemp = this.PSM_ON_MAX;
+    };
   };
 };
 

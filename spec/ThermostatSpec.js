@@ -40,4 +40,14 @@ describe('Thermostat', function(){
     expect(thermostat.getTemp()).toEqual(32);
   });
 
+  it('PSM on resets temp to 25C if already above', function(){
+    thermostat.togglePowerSavingMode();
+    for (var i = 0; i < 25; i++) {
+      thermostat.up();
+    }
+    expect(thermostat.getTemp()).toEqual(32);
+    thermostat.togglePowerSavingMode();
+    expect(thermostat.getTemp()).toEqual(25);
+  });
+
 });
