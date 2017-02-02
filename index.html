@@ -3,55 +3,23 @@
   <title>THERMOSTAT</title>
   <script src="src/Thermostat.js"></script>
   <link href='http://assets.makersacademy.com/images/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
-<style>
-table {
-  text-align: center;
-  width: 550px;
-  height: 40px;
-  border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: lightgrey;
-  z-index: 25;
-}
-#main {
-  font-family: 'Georgia';
-  text-align: center;
-  width:550px;
-  border: 2px solid black;
-  padding: 10px;
-  width: 600px;
-  height: 250px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #595959;
-  z-index: 10;
-}
-#controls {
-  width:550px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-}
-button {
-  width:125px;
-  height: 40px;
-}
-h1 {
-  color: grey;
-}
-</style>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="jquery-3.1.1.min.js"></script>
 </head>
+
+
 <body>
-<!--
-   display currentTemp
-   display power mode
-   display energy usage
-   button up
-   button down
-   button change power mode
-   button reset
- -->
+  <script>
+  $( document ).ready(function() {
+    $( "#up" ).click(function( event ) { alert( "up" ); });
+    $( "#down" ).click(function( event ) { alert( "down" ); });
+    $( "#power" ).click(function( event ) { alert( "power" ); });
+    $( "#reset" ).click(function( event ) { alert( "reset" ); });
+    $( "#reset" ).click(function( event ) { $.get('http://www.google.co.uk') ); });
+  });
+
+  </script>
+
  <div id="main">
    <h1>Thermostat</h1>
  <table>
@@ -67,10 +35,10 @@ h1 {
   </tr>
 </table>
 <div id="controls">
-  <button>UP</button>
-  <button>DOWN</button>
-  <button>POWER SAVING</button>
-  <button>RESET</button>
+  <button id='up'>UP</button>
+  <button id='down'>DOWN</button>
+  <button id='power'>POWER SAVING</button>
+  <button id='reset'>RESET</button>
 </div>
 </div>
 
