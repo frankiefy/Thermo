@@ -18,5 +18,11 @@ describe('Thermostat', function(){
     expect(thermostat.getTemp()).toEqual(19);
   });
 
+  it('min 10C', function(){
+    for (var i = 0; i < 15; i++) {
+      thermostat.down();
+    }
+    expect(thermostat.getTemp()).toEqual(10);
+  });
 
 });
