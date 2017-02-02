@@ -32,6 +32,12 @@ describe('Thermostat', function(){
     expect(thermostat.getTemp()).toEqual(25);
   });
 
-
+  it('PSM max 32C', function(){
+    thermostat.togglePowerSavingMode();
+    for (var i = 0; i < 25; i++) {
+      thermostat.up();
+    }
+    expect(thermostat.getTemp()).toEqual(32);
+  });
 
 });
