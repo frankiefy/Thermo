@@ -2,8 +2,11 @@
 
 function Thermostat(){
   this.DEFAULT_TEMP = 20;
-  this._currentTemp = this.DEFAULT_TEMP;
   this.MIN_TEMP = 10;
+  this.PSM_ON_MAX = 25;
+
+  this._currentTemp = this.DEFAULT_TEMP;
+  this._powerSavingMode = true;
 };
 
 Thermostat.prototype.getTemp = function(){
@@ -11,7 +14,9 @@ Thermostat.prototype.getTemp = function(){
 };
 
 Thermostat.prototype.up = function(){
-  this._currentTemp++;
+  if (this._powerSavingMode && this._currentTemp < this.PSM_ON_MAX) {
+    this._currentTemp++;
+  };
 };
 
 Thermostat.prototype.down = function(){

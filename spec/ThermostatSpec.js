@@ -25,4 +25,13 @@ describe('Thermostat', function(){
     expect(thermostat.getTemp()).toEqual(10);
   });
 
+  it('default max 25C', function(){
+    for (var i = 0; i < 25; i++) {
+      thermostat.up();
+    }
+    expect(thermostat.getTemp()).toEqual(25);
+  });
+
+
+
 });
