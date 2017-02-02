@@ -18,6 +18,16 @@ Thermostat.prototype.reset = function(){
   this._currentTemp = this.DEFAULT_TEMP;
 };
 
+Thermostat.prototype.reportEnergyUsage = function(){
+  if (this.getTemp() < 18 ) {
+    return "low-usage";
+  } else if (this.getTemp() < 25 ){
+    return "medium-usage";
+  } else {
+    return "high-usage";
+  };
+};
+
 Thermostat.prototype.togglePowerSavingMode = function(){
   if (this._powerSavingMode == true) {
     this._powerSavingMode = false;
