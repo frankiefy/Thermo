@@ -18,6 +18,12 @@ describe('Thermostat', function(){
     expect(thermostat.getTemp()).toEqual(19);
   });
 
+  it('resets to 20C', function(){
+    thermostat.up();
+    thermostat.reset();
+    expect(thermostat.getTemp()).toEqual(20);
+  });
+
   it('min 10C', function(){
     for (var i = 0; i < 15; i++) {
       thermostat.down();
