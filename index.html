@@ -3,9 +3,25 @@
   <title>THERMOSTAT</title>
   <script src="src/Thermostat.js"></script>
   <link href='http://assets.makersacademy.com/images/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<style>
+table {
+  text-align: center;
+  width:90%;
+  border:3px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+#main {
+  border: 3px solid black;
+  padding: 10px;
+  width: 600px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 </head>
 <body>
-  <h1>Thermostat</h1>
 <!--
    display currentTemp
    display power mode
@@ -15,11 +31,12 @@
    button change power mode
    button reset
  -->
-
- <table style='text-align:center; width:90%; border:3px solid black'>
+ <div id="main">
+   <h1>Thermostat</h1>
+ <table>
   <tr>
     <th>Current Temp</th>
-    <th>Power Mode</th>
+    <th>Power Saving Mode</th>
     <th>Energy Usage</th>
   </tr>
   <tr>
@@ -28,5 +45,12 @@
     <td>medium-usage</td>
   </tr>
 </table>
+<div id="controls">
+  <button>UP</button>
+  <button>DOWN</button>
+  <button>POWER SAVING MODE</button>
+  <button>RESET</button>
+</div>
+</div>
 
 </body>
