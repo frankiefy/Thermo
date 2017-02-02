@@ -2,8 +2,8 @@
 
 ## Specification
 - starts at 20 √
-- up function
-- down function
+- up function √
+- down function √
 - minimum 10
 - power saving mode, max 25
 - power saving mode off, max 32

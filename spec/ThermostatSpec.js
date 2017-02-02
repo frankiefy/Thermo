@@ -13,4 +13,10 @@ describe('Thermostat', function(){
     expect(thermostat.getTemp()).toEqual(21);
   });
 
+  it('decrease by 1C', function(){
+    thermostat.down();
+    expect(thermostat.getTemp()).toEqual(19);
+  });
+
+
 });
