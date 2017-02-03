@@ -5,20 +5,10 @@
   <link href='http://assets.makersacademy.com/images/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="jquery-3.1.1.min.js"></script>
+  <script src="src/jQueryLayer.js"></script>
 </head>
 
-
 <body>
-  <script>
-  $( document ).ready(function() {
-    $( "#up" ).click(function( event ) { alert( "up" ); });
-    $( "#down" ).click(function( event ) { alert( "down" ); });
-    $( "#power" ).click(function( event ) { alert( "power" ); });
-    $( "#reset" ).click(function( event ) { alert( "reset" ); });
-    $( "#reset" ).click(function( event ) { $.get('http://www.google.co.uk') ); });
-  });
-
-  </script>
 
  <div id="main">
    <h1>Thermostat</h1>
@@ -29,9 +19,9 @@
     <th>Energy Usage</th>
   </tr>
   <tr>
-    <td>20</td>
-    <td>ON</td>
-    <td>medium-usage</td>
+    <td id='temp'>20°C</td>
+    <td id='psm'>ON</td>
+    <td id='usage'>medium-usage</td>
   </tr>
 </table>
 <div id="controls">

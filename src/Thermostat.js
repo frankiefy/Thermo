@@ -14,8 +14,17 @@ Thermostat.prototype.getTemp = function(){
   return this._currentTemp;
 };
 
+Thermostat.prototype.getPSM = function(){
+  if (this._powerSavingMode === true) {
+    return "ON";
+  }else {
+    return "OFF";
+  };
+};
+
 Thermostat.prototype.reset = function(){
   this._currentTemp = this.DEFAULT_TEMP;
+  this._powerSavingMode = true
 };
 
 Thermostat.prototype.reportEnergyUsage = function(){
