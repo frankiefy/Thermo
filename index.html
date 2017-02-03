@@ -3,7 +3,7 @@
   <title>THERMOSTAT</title>
   <script src="src/Thermostat.js"></script>
   <link href='http://assets.makersacademy.com/images/favicons/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
-  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="myStyles.css">
   <script src="jquery-3.1.1.min.js"></script>
   <script src="src/jQueryLayer.js"></script>
 </head>
@@ -32,4 +32,19 @@
 </div>
 </div>
 
+<section>
+  <h2><span id="location-name"></span>
+    <select id="current-city">
+    <option value="london">London</option>
+    <option value="newyork">New York</option>
+    <option value="paris">Paris</option>
+    <option value="tokyo">Tokyo</option>
+  </select>
+  <li>Current Temperature: <span id="current-temperature"></span>°C</li>
+  <li>Humidity: <span id="current-humidity"></span>%</li>
+  <li>Pressure: <span id="current-pressure"></span> hPa</li>
+  <li>Temperature max: <span id="current-max-temperature"></span>°C</li>
+  <li>Temperatiure min: <span id="current-min-temperature"></span>°C</h2></li>
+
+</section>
 </body>

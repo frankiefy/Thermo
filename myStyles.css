@@ -32,5 +32,11 @@ button {
   height: 40px;
 }
 h1 {
+  font-family: 'Georgia';
   color: grey;
+}
+h2 {
+  font-family: 'Georgia';
+  color: #006600
+
 }
