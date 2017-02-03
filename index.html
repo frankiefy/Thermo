@@ -10,6 +10,10 @@
 
 <body>
 
+<script>{
+  document.body.style.backgroundColor = "#f3f3f3";
+  //document.body.style.backgroundImage = "url('https://s-media-cache-ak0.pinimg.com/originals/5f/9c/02/5f9c0220fd4a6ab8e614f0cbc69c313a.png')";
+}</script>
  <div id="main">
    <h1>Thermostat</h1>
  <table>
@@ -32,19 +36,22 @@
 </div>
 </div>
 
-<section>
-  <h2><span id="location-name"></span>
-    <select id="current-city">
+<p>
+  <h2>
+  <span id="location-name"></span>:
+  <li>Current Temperature: <span id="current-temperature"></span>°C</li>
+  <li>Humidity: <span id="current-humidity"></span>%</li>
+  <li>Pressure: <span id="current-pressure"></span> hPa</li>
+  <li>Temperature max: <span id="current-max-temperature"></span>°C</li>
+  <li>Temperatiure min: <span id="current-min-temperature"></span>°C</li>
+
+  <select id="current-city">
     <option value="london">London</option>
     <option value="newyork">New York</option>
     <option value="paris">Paris</option>
     <option value="tokyo">Tokyo</option>
   </select>
-  <li>Current Temperature: <span id="current-temperature"></span>°C</li>
-  <li>Humidity: <span id="current-humidity"></span>%</li>
-  <li>Pressure: <span id="current-pressure"></span> hPa</li>
-  <li>Temperature max: <span id="current-max-temperature"></span>°C</li>
-  <li>Temperatiure min: <span id="current-min-temperature"></span>°C</h2></li>
+  </h2>
+</p>
 
-</section>
 </body>
